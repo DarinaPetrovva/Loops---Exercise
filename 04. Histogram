@@ -1,0 +1,40 @@
+using System;
+
+namespace zad32
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            int counter1 = 0;
+            int counter2 = 0;
+            int counter3 = 0;
+            int counter4 = 0;
+            int counter5 = 0;
+            for (int i = 1; i <= number; i++)
+            {
+                int a = int.Parse(Console.ReadLine());
+                if (a < 200) counter1++;
+                else if (a <= 399) counter2++;
+                else if (a <= 599) counter3++;
+                else if (a <= 799) counter4++;
+                else counter5++;
+
+            }
+            double p1 = (double)counter1 / number * 100;
+            double p2 = (double)counter2 / number * 100;
+            double p3 = (double)counter3 / number * 100;
+            double p4 = (double)counter4 / number * 100;
+            double p5 = (double)counter5 / number * 100;
+           
+
+            Console.WriteLine($"{p1:f2}%");
+            Console.WriteLine($"{p2:f2}%");
+            Console.WriteLine($"{p3:f2}%");
+            Console.WriteLine($"{p4:f2}%");
+            Console.WriteLine($"{p5:f2}%");
+
+        }
+    }
+}
